@@ -5,13 +5,11 @@ const rootDir = require("../util/path")
 
 const viewsBasePath = path.join(rootDir,"views");
 
-router.post('/success',(req, res, next) => {
-    res.sendFile(path.join(viewsBasePath,"success.html"));
-});
+const successController = require("../controllers/success");
+const contactController = require("../controllers/contact");
 
-router.get('/contactus',(req, res, next) => {
-    res.sendFile(path.join(viewsBasePath,"contact.html"));
-});
+router.post('/success',successController.getSuccessPage);
+router.get('/contactus',contactController.getContactPage);
 
 router.get('/',(req, res, next) => {
     res.sendFile(path.join(viewsBasePath,"shop.html"));
