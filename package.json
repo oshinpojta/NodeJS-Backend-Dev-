@@ -6,7 +6,7 @@
   },
   "name": "backend-dev",
   "version": "1.0.0",
-  "main": "sample.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon"
   },
